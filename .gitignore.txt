@@ -1,0 +1,14 @@
+# Godot-specific
+.import/
+.export/
+.godot/
+.cache/
+.editor_config.json
+
+# System
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log

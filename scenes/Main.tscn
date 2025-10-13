@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://d4fxxffjbuu7r"]
+
+[ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_0bbpv"]
+[ext_resource type="Script" uid="uid://04q74bm3ce3" path="res://scripts/Main.gd" id="1_rarhs"]
+[ext_resource type="PackedScene" uid="uid://c4rg7pvvp2wv1" path="res://scenes/Door.tscn" id="2_rarhs"]
+[ext_resource type="PackedScene" uid="uid://di0ka1y1bfn6m" path="res://scenes/UI.tscn" id="3_vcsgt"]
+[ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="5_vcsgt"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rarhs")
+
+[node name="Candy2" parent="." instance=ExtResource("5_vcsgt")]
+position = Vector2(-381, -69)
+
+[node name="Player" parent="." instance=ExtResource("1_0bbpv")]
+position = Vector2(-1, -2)
+
+[node name="Door" parent="." instance=ExtResource("2_rarhs")]
+position = Vector2(0, -162)
+
+[node name="UI" parent="." instance=ExtResource("3_vcsgt")]
+
+[node name="Candy" parent="." instance=ExtResource("5_vcsgt")]
+position = Vector2(-233, -141)
+
+[connection signal="door_knocked" from="Door" to="." method="_on_Door_door_knocked"]

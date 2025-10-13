@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://di0ka1y1bfn6m"]
+
+[ext_resource type="Script" uid="uid://rhpnds0t83ad" path="res://scripts/UI.gd" id="1_dj8aq"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_dj8aq")
+
+[node name="CandyLabel" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 86.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 51
+text = "Candy: 0"
