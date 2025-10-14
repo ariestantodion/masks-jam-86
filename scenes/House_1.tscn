@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://csmtobiyycu6b"]
+
+[ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_o2hn0"]
+[ext_resource type="Script" uid="uid://c6jvt7j1uwl75" path="res://scripts/House_1.gd" id="1_oqmcw"]
+[ext_resource type="PackedScene" uid="uid://c0l1k7of35sp5" path="res://scenes/Pumpkin.tscn" id="2_8hhbx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hhbx"]
+size = Vector2(667, 2250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqmcw"]
+size = Vector2(1532, 603.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hynay"]
+size = Vector2(1514.5, 568)
+
+[node name="House1" type="Node2D"]
+script = ExtResource("1_oqmcw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = -717.0
+offset_right = 943.0
+offset_bottom = 720.0
+
+[node name="Player" parent="." instance=ExtResource("1_o2hn0")]
+position = Vector2(164, 296)
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(488, 616)
+
+[node name="Pumpkin" parent="." instance=ExtResource("2_8hhbx")]
+position = Vector2(470, -588)
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(-332, 4)
+shape = SubResource("RectangleShape2D_8hhbx")
+
+[node name="BottomWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall"]
+position = Vector2(547, 1017.25)
+shape = SubResource("RectangleShape2D_oqmcw")
+
+[node name="Right Wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall"]
+position = Vector2(1273, -83)
+shape = SubResource("RectangleShape2D_8hhbx")
+
+[node name="UpperWall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall"]
+position = Vector2(480.75, -999)
+shape = SubResource("RectangleShape2D_hynay")
+
+[connection signal="goal_reached" from="Pumpkin" to="." method="_on_pumpkin_goal_reached"]

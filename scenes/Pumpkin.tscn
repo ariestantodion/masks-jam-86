@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0l1k7of35sp5"]
+
+[ext_resource type="Texture2D" uid="uid://vjxs41kpy30u" path="res://art/Pumpkin.png" id="1_eoxd6"]
+[ext_resource type="Script" uid="uid://bvu3j5sc2aw1h" path="res://scripts/Pumpkin.gd" id="1_fk3p6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_te3ao"]
+radius = 33.0
+height = 86.0
+
+[node name="Pumpkin" type="Area2D"]
+script = ExtResource("1_fk3p6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_te3ao")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("1_eoxd6")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = -22.0
+offset_top = -69.0
+offset_right = 22.0
+offset_bottom = -46.0
+text = "GOAL"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
