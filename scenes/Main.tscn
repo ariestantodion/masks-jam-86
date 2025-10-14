@@ -22,5 +22,3 @@ position = Vector2(0, -162)
 
 [node name="Candy" parent="." instance=ExtResource("5_vcsgt")]
 position = Vector2(-233, -141)
-
-[connection signal="door_knocked" from="Door" to="." method="_on_Door_door_knocked"]
