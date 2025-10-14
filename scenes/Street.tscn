@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://4wq6cqbxa5u6"]
 
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_1kily"]
-[ext_resource type="PackedScene" uid="uid://b52k0mht2sy2q" path="res://scenes/TransitionLayer.tscn" id="2_1srjd"]
+[ext_resource type="PackedScene" uid="uid://c4rg7pvvp2wv1" path="res://scenes/Door.tscn" id="2_1srjd"]
 
 [node name="Street" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_1kily")]
 position = Vector2(150, 125)
 
-[node name="TransitionLayer" parent="." instance=ExtResource("2_1srjd")]
+[node name="Door" parent="." instance=ExtResource("2_1srjd")]

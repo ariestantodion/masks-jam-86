@@ -1,4 +1,4 @@
-# Candy.gd
+#Candy.gd
 extends Area2D
 
 signal collected

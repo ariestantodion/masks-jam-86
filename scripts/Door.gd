@@ -1,12 +1,6 @@
-##Door.gd
+#Door.gd
 extends Area2D
-#
-#signal door_knocked
-#
-#func _on_Door_body_entered(body):
-	#if body.name == "Player":
-		#emit_signal("door_knocked")
-		#
+
 #Track whether the player is close enough to interact
 var player_nearby: bool = false
 
@@ -21,6 +15,6 @@ func _on_body_exited(body):
 func _process(delta):
 	# Check if the player is nearby AND presses the interact key ("E")
 	if player_nearby and Input.is_action_just_pressed("Interact"):
-		get_tree().change_scene_to_file("res://scenes/House1.tscn")
+		get_tree().change_scene_to_file("res://scenes/House_1.tscn")
 		print("Poop")
  
