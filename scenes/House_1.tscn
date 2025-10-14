@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://csmtobiyycu6b"]
+[gd_scene load_steps=7 format=3 uid="uid://f5xw6bdiv0wc"]
 
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_o2hn0"]
 [ext_resource type="Script" uid="uid://c6jvt7j1uwl75" path="res://scripts/House_1.gd" id="1_oqmcw"]
-[ext_resource type="PackedScene" uid="uid://c0l1k7of35sp5" path="res://scenes/Pumpkin.tscn" id="2_8hhbx"]
+[ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="2_8hhbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hhbx"]
 size = Vector2(667, 2250)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0l1k7of35sp5"]
+[gd_scene load_steps=4 format=3 uid="uid://4a2o14jjf0tw"]
 
 [ext_resource type="Texture2D" uid="uid://vjxs41kpy30u" path="res://art/Pumpkin.png" id="1_eoxd6"]
 [ext_resource type="Script" uid="uid://bvu3j5sc2aw1h" path="res://scripts/Pumpkin.gd" id="1_fk3p6"]
