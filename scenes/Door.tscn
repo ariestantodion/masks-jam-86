@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4rg7pvvp2wv1"]
+[gd_scene load_steps=4 format=3 uid="uid://c4rg7pvvp2wv1"]
 
 [ext_resource type="Script" uid="uid://dty4hoyoqjdex" path="res://scripts/Door.gd" id="1_eyv6f"]
 [ext_resource type="Texture2D" uid="uid://g8ci4jb4scaq" path="res://art/door.png" id="1_yfgsh"]
-[ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="3_mg2as"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eyv6f"]
 radius = 385.0
@@ -19,9 +18,6 @@ texture = ExtResource("1_yfgsh")
 position = Vector2(1, 60)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("CapsuleShape2D_eyv6f")
-
-[node name="Player" parent="." instance=ExtResource("3_mg2as")]
-position = Vector2(173, 190)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
