@@ -1,3 +1,4 @@
+#EnemyPatrol.gd
 extends CharacterBody2D
 
 signal player_hit

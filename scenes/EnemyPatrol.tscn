@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b055n4ijlidj1"]
 
-[ext_resource type="Script" uid="uid://cq3dqi1kj0nwj" path="res://scripts/enemy_patrol.gd" id="1_eq1xe"]
+[ext_resource type="Script" uid="uid://cq3dqi1kj0nwj" path="res://scripts/EnemyPatrol.gd" id="1_eq1xe"]
 [ext_resource type="Texture2D" uid="uid://baggf2g2q3tg5" path="res://art/enemy.png" id="1_pemrw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vyif2"]
