@@ -1,9 +1,7 @@
 #Candy.gd
 extends Area2D
 
-signal collected
-
-func _on_body_entered(body):
+func _on_body_entered(body: Node) -> void:
 	if body.name == "Player":
-		emit_signal("collected")
+		MaskManager.add_candy(1)
 		queue_free()

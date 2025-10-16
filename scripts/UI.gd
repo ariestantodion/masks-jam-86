@@ -1,13 +1,15 @@
 #UI.gd
 extends CanvasLayer
 
-var candy: int = 0
 @onready var candy_label: Label = $CandyLabel
 
-func add_candy(amount: int = 1) -> void:
-	candy += amount
-	candy_label.text = "Candy: " + str(candy)
+func _ready() -> void:
+	# Initialize display
+	candy_label.text = "Candy: " + str(MaskManager.candy)
+	
+	# Connect to MaskManager signal (only once)
+	if not MaskManager.candy_changed.is_connected(_on_candy_changed):
+		MaskManager.candy_changed.connect(_on_candy_changed)
 
-func reset() -> void:
-	candy = 0
-	candy_label.text = "Candy: 0"
+func _on_candy_changed(value: int) -> void:
+	candy_label.text = "Candy: " + str(value)

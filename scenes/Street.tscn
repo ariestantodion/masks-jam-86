@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://4wq6cqbxa5u6"]
+[gd_scene load_steps=4 format=3 uid="uid://4wq6cqbxa5u6"]
 
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_1kily"]
 [ext_resource type="PackedScene" uid="uid://c4rg7pvvp2wv1" path="res://scenes/Door.tscn" id="2_1srjd"]
+[ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="3_0sq60"]
 
 [node name="Street" type="Node2D"]
 
@@ -9,3 +10,18 @@
 position = Vector2(150, 125)
 
 [node name="Door" parent="." instance=ExtResource("2_1srjd")]
+
+[node name="Candy" parent="." instance=ExtResource("3_0sq60")]
+position = Vector2(-270, 222)
+
+[node name="Candy2" parent="." instance=ExtResource("3_0sq60")]
+position = Vector2(-336, 394)
+
+[node name="Candy3" parent="." instance=ExtResource("3_0sq60")]
+position = Vector2(-387, 151)
+
+[node name="Candy4" parent="." instance=ExtResource("3_0sq60")]
+position = Vector2(-224, 76)
+
+[node name="Candy5" parent="." instance=ExtResource("3_0sq60")]
+position = Vector2(-138, 333)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cilavpasqns4j"]
+
+[ext_resource type="Script" uid="uid://cuqlfyggi13w3" path="res://ui/Toast.gd" id="1_p4guw"]
+
+[node name="Toast" type="CanvasLayer" groups=["toast"]]
+script = ExtResource("1_p4guw")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

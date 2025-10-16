@@ -1,12 +1,72 @@
-#Player.gd
+# Player.gd
 extends CharacterBody2D
 
-@export var speed := 200.0
+@onready var sprite: Sprite2D = $Sprite2D
 
-func _physics_process(delta):
+# Base speed before any upgrades
+@export var base_speed := 200.0
+var speed := 200.0
+
+# Optional reference to the toast (popup) UI
+var toast: Node = null
+
+
+func _ready() -> void:
+	print("MaskManager loaded:", MaskManager)
+	print("Current candy:", MaskManager.candy)
+
+	# Find the Toast node in the scene tree (group name = "toast")
+	toast = get_tree().get_first_node_in_group("toast")
+
+	# Apply initial speed & color
+	_apply_speed()
+	_apply_mask_tint()
+
+	# Connect to MaskManager's signal so upgrades update this player immediately
+	if not MaskManager.speed_upgraded.is_connected(_on_speed_upgraded):
+		MaskManager.speed_upgraded.connect(_on_speed_upgraded)
+
+
+func _physics_process(delta: float) -> void:
 	var dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = dir * speed
 	move_and_slide()
 
-func _on_enemy_player_hit(player):
-	print("Player was hit by enemy:", player.name)
+	# Temporary upgrade hotkey (press U)
+	if Input.is_action_just_pressed("upgrade_speed"):
+		if MaskManager.upgrade_speed():
+			_show_toast("Speed upgraded!")
+		else:
+			_show_toast("Need %d candy" % MaskManager.SPEED_COST)
+
+
+func _apply_speed() -> void:
+	# Pull the current speed from MaskManager
+	speed = MaskManager.current_speed(base_speed)
+
+
+func _apply_mask_tint() -> void:
+	var level: int = clamp(MaskManager.speed_level, 1, MaskManager.MAX_SPEED_LEVEL)
+	var t: float = float(level - 1) / max(1.0, float(MaskManager.MAX_SPEED_LEVEL - 1))
+	
+	# Dramatic color change — white → bright cyan as speed increases
+	var r := 1.0 - 0.4 * t
+	var g := 1.0 - 0.2 * t
+	var b := 1.0
+	sprite.modulate = Color(r, g, b)
+
+
+func _on_speed_upgraded(new_level: int, new_speed: float) -> void:
+	# When MaskManager upgrades, update locally
+	_apply_speed()
+	_apply_mask_tint()
+	_show_toast("Speed upgraded!")
+
+
+func _show_toast(msg: String) -> void:
+	# If the Toast scene exists in the current scene tree, show text
+	if toast and toast.has_method("show_text"):
+		toast.show_text(msg)
+	else:
+		# fallback for safety
+		print(msg)
