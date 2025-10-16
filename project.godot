@@ -18,6 +18,7 @@ config/icon="res://art/icon.svg"
 [autoload]
 
 GameManager="*res://scripts/GameManager.gd"
+MaskManager="*res://scripts/MaskManager.gd"
 
 [display]
 
