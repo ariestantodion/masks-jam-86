@@ -9,6 +9,7 @@ var speed := 200.0
 
 # Optional reference to the toast (popup) UI
 var toast: Node = null
+var invisibility_cooldown: bool = false
 
 
 func _ready() -> void:
@@ -38,6 +39,21 @@ func _physics_process(delta: float) -> void:
 			_show_toast("Speed upgraded!")
 		else:
 			_show_toast("Need %d candy" % MaskManager.SPEED_COST)
+			
+	if Input.is_action_just_pressed("activate_invisibility"):
+		if MaskManager.invisibility_level >= 1 and invisibility_cooldown == false:
+			get_node("Sprite2D").modulate.a = 0.3
+			get_node("CollisionShape2D").set_deferred("disabled", true)
+			await get_tree().create_timer(5.0).timeout
+			invisibility_cooldown = true
+			get_node("Sprite2D").modulate.a = 1.0
+			get_node("CollisionShape2D").set_deferred("disabled", false)
+			await get_tree().create_timer(10.0).timeout
+			invisibility_cooldown = false
+		elif MaskManager.invisibility_level >= 1 and invisibility_cooldown == true:
+			_show_toast("Invisibility on cooldown")
+		else:
+			_show_toast("Invisibility unavailable")
 
 
 func _apply_speed() -> void:
