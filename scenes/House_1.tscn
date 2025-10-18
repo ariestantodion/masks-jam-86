@@ -60,6 +60,10 @@ shape = SubResource("RectangleShape2D_hynay")
 position = Vector2(56, 158)
 scale = Vector2(0.24, 0.24)
 
+[node name="EnemyPatrol2" parent="." instance=ExtResource("4_hynay")]
+position = Vector2(788, -394)
+scale = Vector2(0.24, 0.24)
+
 [node name="Candy" parent="." instance=ExtResource("5_8co1o")]
 position = Vector2(183, -150)
 
