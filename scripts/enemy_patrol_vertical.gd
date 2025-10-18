@@ -14,7 +14,7 @@ func _ready() -> void:
 	timer.start()
 
 func _physics_process(delta: float) -> void:
-	velocity.x = direction * speed
+	velocity.y = direction * speed
 	move_and_slide()
 
 func _on_Timer_timeout() -> void:

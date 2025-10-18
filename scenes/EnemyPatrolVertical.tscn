@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://copx3dgoe5k3x"]
+
+[ext_resource type="Script" uid="uid://4w31jdgvjf2c" path="res://scripts/enemy_patrol_vertical.gd" id="1_ff65w"]
+[ext_resource type="Texture2D" uid="uid://baggf2g2q3tg5" path="res://art/enemy.png" id="2_je021"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vyif2"]
+radius = 143.003
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eq1xe"]
+radius = 148.122
+
+[node name="EnemyPatrol" type="CharacterBody2D"]
+position = Vector2(642, 361)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_ff65w")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Enemy" type="Sprite2D" parent="."]
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("2_je021")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 23)
+shape = SubResource("CircleShape2D_vyif2")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+visible = false
+position = Vector2(0, 22)
+shape = SubResource("CircleShape2D_eq1xe")
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
