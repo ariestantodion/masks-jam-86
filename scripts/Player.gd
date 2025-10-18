@@ -44,11 +44,11 @@ func _physics_process(delta: float) -> void:
 		if MaskManager.invisibility_level >= 1 and invisibility_cooldown == false:
 			get_node("Sprite2D").modulate.a = 0.3
 			get_node("CollisionShape2D").set_deferred("disabled", true)
-			await get_tree().create_timer(5.0).timeout
+			await get_tree().create_timer(5.0).timeout #Timer for invisibility duration, update to a variable that increases with invisibilty lvl
 			invisibility_cooldown = true
 			get_node("Sprite2D").modulate.a = 1.0
 			get_node("CollisionShape2D").set_deferred("disabled", false)
-			await get_tree().create_timer(10.0).timeout
+			await get_tree().create_timer(10.0).timeout #Invisibility cooldown timer
 			invisibility_cooldown = false
 		elif MaskManager.invisibility_level >= 1 and invisibility_cooldown == true:
 			_show_toast("Invisibility on cooldown")

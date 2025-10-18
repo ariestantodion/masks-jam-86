@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctiwpktahej53"]
+
+[ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_usn3g"]
+[ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/EnemyPatrol.tscn" id="2_usn3g"]
+[ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="2_ylm2s"]
+[ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="4_ylm2s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyo3h"]
+size = Vector2(66, 2151)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyrie"]
+size = Vector2(50.5, 2124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snrs2"]
+size = Vector2(817.5, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajlny"]
+size = Vector2(812, 31)
+
+[node name="House2" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(19.7603, 51.8253)
+
+[node name="Player" parent="." instance=ExtResource("1_usn3g")]
+position = Vector2(394, 1990)
+
+[node name="Pumpkin" parent="." instance=ExtResource("2_ylm2s")]
+position = Vector2(378, 87)
+
+[node name="Left wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left wall"]
+position = Vector2(-33, 1050.5)
+shape = SubResource("RectangleShape2D_lyo3h")
+
+[node name="Right wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right wall"]
+position = Vector2(815.75, 1056)
+shape = SubResource("RectangleShape2D_tyrie")
+
+[node name="Bottom wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom wall"]
+position = Vector2(396.75, 2093)
+shape = SubResource("RectangleShape2D_snrs2")
+
+[node name="Top wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top wall"]
+position = Vector2(394, -15.5)
+shape = SubResource("RectangleShape2D_ajlny")
+
+[node name="EnemyPatrol7" parent="." instance=ExtResource("2_usn3g")]
+position = Vector2(383, 283)
+scale = Vector2(0.7, 0.7)
+speed = 275.0
+
+[node name="EnemyPatrol6" parent="." instance=ExtResource("2_usn3g")]
+position = Vector2(384, 675)
+scale = Vector2(0.2, 0.2)
+speed = 500.0
+max_time = 2.0
+
+[node name="EnemyPatrol5" parent="." instance=ExtResource("2_usn3g")]
+position = Vector2(384, 757)
+scale = Vector2(0.2, 0.2)
+speed = 500.0
+max_time = 2.0
+
+[node name="EnemyPatrol4" parent="." instance=ExtResource("2_usn3g")]
+position = Vector2(384, 1112)
+scale = Vector2(0.3, 0.3)
+max_time = 2.0
+
+[node name="EnemyPatrol3" parent="." instance=ExtResource("2_usn3g")]
+position = Vector2(383, 1249)
+scale = Vector2(0.2, 0.2)
+speed = 500.0
+max_time = 2.0
+
+[node name="EnemyPatrol2" parent="." instance=ExtResource("2_usn3g")]
+position = Vector2(384, 1385)
+scale = Vector2(0.3, 0.3)
+max_time = 2.0
+
+[node name="EnemyPatrol1" parent="." instance=ExtResource("2_usn3g")]
+position = Vector2(392, 1667)
+speed = 600.0
+min_time = 2.0
+max_time = 2.0
+
+[node name="Candy" parent="." instance=ExtResource("4_ylm2s")]
+position = Vector2(737, 1259)
+
+[node name="Candy2" parent="." instance=ExtResource("4_ylm2s")]
+position = Vector2(50, 1254)
+
+[node name="Candy3" parent="." instance=ExtResource("4_ylm2s")]
+position = Vector2(393, 1847)
+
+[node name="Candy4" parent="." instance=ExtResource("4_ylm2s")]
+position = Vector2(389, 509)
+
+[node name="Candy5" parent="." instance=ExtResource("4_ylm2s")]
+position = Vector2(740, 288)
+
+[node name="Candy6" parent="." instance=ExtResource("4_ylm2s")]
+position = Vector2(48, 307)
+
+[node name="Candy7" parent="." instance=ExtResource("4_ylm2s")]
+position = Vector2(386, 924)
+
+[node name="Candy8" parent="." instance=ExtResource("4_ylm2s")]
+position = Vector2(594, 1505)
+
+[node name="Candy9" parent="." instance=ExtResource("4_ylm2s")]
+position = Vector2(218, 1516)
