@@ -11,7 +11,7 @@ var speed := 200.0
 var toast: Node = null
 
 # --- Invisibility system (Dion) ---
-const BASE_INVIS_DURATION := 2.0
+const BASE_INVIS_DURATION := 1.0
 const BASE_INVIS_COOLDOWN := 5.0
 const DURATION_PER_LEVEL := 0.5   # +0.5 s per level
 const COOLDOWN_PER_LEVEL := 0.5   # −0.5 s per level (min 0.5 s)
