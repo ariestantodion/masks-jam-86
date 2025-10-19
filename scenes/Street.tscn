@@ -1,27 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://4wq6cqbxa5u6"]
+[gd_scene load_steps=7 format=3 uid="uid://4wq6cqbxa5u6"]
 
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_1kily"]
-[ext_resource type="PackedScene" uid="uid://c4rg7pvvp2wv1" path="res://scenes/Door.tscn" id="2_1srjd"]
+[ext_resource type="Script" uid="uid://cwan7blw8xqmm" path="res://scripts/Street.gd" id="1_od4y3"]
+[ext_resource type="PackedScene" uid="uid://c4rg7pvvp2wv1" path="res://scenes/Doors/Door_1.tscn" id="2_1srjd"]
 [ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="3_0sq60"]
+[ext_resource type="PackedScene" uid="uid://bh2aj4ufq170f" path="res://scenes/Doors/Door_2.tscn" id="4_u30qc"]
+[ext_resource type="PackedScene" uid="uid://bx2fmcuncgtl5" path="res://scenes/Doors/Door_3.tscn" id="5_od4y3"]
 
 [node name="Street" type="Node2D"]
+script = ExtResource("1_od4y3")
 
 [node name="Player" parent="." instance=ExtResource("1_1kily")]
 position = Vector2(150, 125)
 
-[node name="Door" parent="." instance=ExtResource("2_1srjd")]
+[node name="(Street) Candies" type="Node2D" parent="."]
 
-[node name="Candy" parent="." instance=ExtResource("3_0sq60")]
+[node name="Candy" parent="(Street) Candies" instance=ExtResource("3_0sq60")]
 position = Vector2(-270, 222)
 
-[node name="Candy2" parent="." instance=ExtResource("3_0sq60")]
+[node name="Candy2" parent="(Street) Candies" instance=ExtResource("3_0sq60")]
 position = Vector2(-336, 394)
 
-[node name="Candy3" parent="." instance=ExtResource("3_0sq60")]
+[node name="Candy3" parent="(Street) Candies" instance=ExtResource("3_0sq60")]
 position = Vector2(-387, 151)
 
-[node name="Candy4" parent="." instance=ExtResource("3_0sq60")]
+[node name="Candy4" parent="(Street) Candies" instance=ExtResource("3_0sq60")]
 position = Vector2(-224, 76)
 
-[node name="Candy5" parent="." instance=ExtResource("3_0sq60")]
+[node name="Candy5" parent="(Street) Candies" instance=ExtResource("3_0sq60")]
 position = Vector2(-138, 333)
+
+[node name="Door_1" parent="." instance=ExtResource("2_1srjd")]
+position = Vector2(331, -62)
+target_house = "uid://f5xw6bdiv0wc"
+
+[node name="Door_2" parent="." instance=ExtResource("4_u30qc")]
+position = Vector2(624, -64)
+target_house = "uid://ctiwpktahej53"
+
+[node name="Door_3" parent="." instance=ExtResource("5_od4y3")]
+position = Vector2(908, -59)
+
+[node name="Spawn1" type="Marker2D" parent="."]
+position = Vector2(150, 125)
+
+[node name="Spawn2" type="Marker2D" parent="."]
+position = Vector2(331, 87)
+
+[node name="Spawn3" type="Marker2D" parent="."]
+position = Vector2(628, 83)
