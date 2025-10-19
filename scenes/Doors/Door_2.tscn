@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh2aj4ufq170f"]
+
+[ext_resource type="Script" uid="uid://dty4hoyoqjdex" path="res://scripts/Door.gd" id="1_poi5i"]
+[ext_resource type="Texture2D" uid="uid://g8ci4jb4scaq" path="res://art/door.png" id="2_x5i4o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eyv6f"]
+radius = 385.0
+height = 1080.0
+
+[node name="Door_2" type="Area2D"]
+script = ExtResource("1_poi5i")
+target_house = "target_house=House_2.tscn"
+house_index = 2
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_x5i4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 60)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CapsuleShape2D_eyv6f")
+
+[node name="HintLabel" type="Label" parent="."]
+visible = false
+offset_left = -80.0
+offset_top = -125.0
+offset_right = 207.0
+offset_bottom = -76.0
+scale = Vector2(0.610133, 0.676051)
+theme_override_font_sizes/font_size = 35
+text = "Press [E] to enter"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

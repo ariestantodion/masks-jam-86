@@ -86,5 +86,3 @@ position = Vector2(313, 122)
 
 [node name="Candy5" parent="." instance=ExtResource("5_8co1o")]
 position = Vector2(99, 513)
-
-[connection signal="goal_reached" from="Pumpkin" to="." method="_on_pumpkin_goal_reached"]

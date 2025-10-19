@@ -1,14 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://4a2o14jjf0tw"]
 
-[ext_resource type="Texture2D" uid="uid://vjxs41kpy30u" path="res://art/Pumpkin.png" id="1_eoxd6"]
-[ext_resource type="Script" uid="uid://bvu3j5sc2aw1h" path="res://scripts/Pumpkin.gd" id="1_fk3p6"]
+[ext_resource type="Script" uid="uid://bvu3j5sc2aw1h" path="res://scripts/Pumpkin.gd" id="1_uunak"]
+[ext_resource type="Texture2D" uid="uid://vjxs41kpy30u" path="res://art/Pumpkin.png" id="2_ja3f8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_te3ao"]
 radius = 33.0
 height = 86.0
 
 [node name="Pumpkin" type="Area2D"]
-script = ExtResource("1_fk3p6")
+script = ExtResource("1_uunak")
+return_to_street = "uid://4wq6cqbxa5u6"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)
@@ -17,6 +18,6 @@ shape = SubResource("CapsuleShape2D_te3ao")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.19, 0.19)
-texture = ExtResource("1_eoxd6")
+texture = ExtResource("2_ja3f8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

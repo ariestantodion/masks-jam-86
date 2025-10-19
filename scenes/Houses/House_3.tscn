@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://coh4qjkcpnx27"]
+
+[ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_snh1m"]
+[ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="2_ti3br"]
+
+[node name="House_3" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_snh1m")]
+position = Vector2(965, 149)
+
+[node name="Pumpkin_3" parent="." instance=ExtResource("2_ti3br")]
+position = Vector2(1161, 78)
+house_index = 3
