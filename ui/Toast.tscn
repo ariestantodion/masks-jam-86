@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cilavpasqns4j"]
 
-[ext_resource type="Script" uid="uid://cuqlfyggi13w3" path="res://ui/Toast.gd" id="1_p4guw"]
+[ext_resource type="Script" uid="uid://cuqlfyggi13w3" path="res://UI/Toast.gd" id="1_p4guw"]
 
 [node name="Toast" type="CanvasLayer" groups=["toast"]]
 script = ExtResource("1_p4guw")

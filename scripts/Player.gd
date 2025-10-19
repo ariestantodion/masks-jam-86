@@ -56,12 +56,12 @@ func _physics_process(delta: float) -> void:
 	velocity = dir * speed
 	move_and_slide()
 
-	# Temporary upgrade hotkey (press U)
-	if Input.is_action_just_pressed("upgrade_speed"):
-		if MaskManager.upgrade_speed():
-			_show_toast("Speed upgraded!")
-		else:
-			_show_toast("Need %d candy" % MaskManager.SPEED_COST)
+#	# Temporary upgrade hotkey (press U)
+#	if Input.is_action_just_pressed("upgrade_speed"):
+#		if MaskManager.upgrade_speed():
+#			_show_toast("Speed upgraded!")
+#		else:
+#			_show_toast("Need %d candy" % MaskManager.SPEED_COST)
 
 	# Activate invisibility (spacebar)
 	if Input.is_action_just_pressed("activate_invisibility"):
