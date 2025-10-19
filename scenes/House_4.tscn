@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bbei1uwgpw8rt"]
+[gd_scene load_steps=27 format=3 uid="uid://bbei1uwgpw8rt"]
 
 [ext_resource type="Shader" uid="uid://bc3oulvfgdmvj" path="res://scripts/House_4.gdshader" id="1_nog0j"]
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="2_eu8yo"]
@@ -42,12 +42,36 @@ size = Vector2(287, 40)
 size = Vector2(273, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4aci"]
-size = Vector2(52, 1081)
+size = Vector2(52, 1240)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_taia3"]
-size = Vector2(66, 1077)
+size = Vector2(66, 1231)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nomp7"]
+size = Vector2(1118, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ropt"]
+size = Vector2(47, 439)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m077k"]
+size = Vector2(2083, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlflq"]
+size = Vector2(577, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkkr5"]
+size = Vector2(1411.34, 69.9697)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pq14p"]
+size = Vector2(1162.48, 65.7609)
 
 [node name="House4" type="Node2D"]
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+offset_left = -159.0
+offset_top = -565.0
+offset_right = 2109.0
+offset_bottom = -182.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 680.0
@@ -106,6 +130,118 @@ offset_right = 1391.0
 offset_bottom = 1081.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
+[node name="ColorRect9" type="ColorRect" parent="."]
+offset_left = 1807.0
+offset_top = -484.0
+offset_right = 2834.0
+offset_bottom = -57.0
+rotation = -0.786193
+
+[node name="walls" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
+position = Vector2(1259, 2480)
+shape = SubResource("RectangleShape2D_1r4fx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls"]
+position = Vector2(653, 1761)
+shape = SubResource("RectangleShape2D_wc0lq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="walls"]
+position = Vector2(1850.5, 1753)
+shape = SubResource("RectangleShape2D_yrmdt")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="walls"]
+position = Vector2(820.25, 1062)
+shape = SubResource("RectangleShape2D_acg70")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="walls"]
+position = Vector2(1686, 1060.5)
+shape = SubResource("RectangleShape2D_tjh30")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="walls"]
+position = Vector2(796.5, 2245)
+shape = SubResource("RectangleShape2D_hg2uv")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="walls"]
+position = Vector2(1259, 2245)
+shape = SubResource("RectangleShape2D_cd2oc")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="walls"]
+position = Vector2(1708.5, 2245)
+shape = SubResource("RectangleShape2D_tw8r4")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="walls"]
+position = Vector2(1254.5, 1061)
+shape = SubResource("RectangleShape2D_78mme")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="walls"]
+position = Vector2(948, 438)
+shape = SubResource("RectangleShape2D_s4aci")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="walls"]
+position = Vector2(1545, 433.5)
+shape = SubResource("RectangleShape2D_taia3")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="walls"]
+position = Vector2(370, -167)
+shape = SubResource("RectangleShape2D_nomp7")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="walls"]
+position = Vector2(-182.5, -381.5)
+shape = SubResource("RectangleShape2D_3ropt")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="walls"]
+position = Vector2(845.5, -600)
+shape = SubResource("RectangleShape2D_m077k")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="walls"]
+position = Vector2(1846.5, -153)
+shape = SubResource("RectangleShape2D_xlflq")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="walls"]
+position = Vector2(2582.94, -608.106)
+rotation = -0.787477
+shape = SubResource("RectangleShape2D_rkkr5")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="walls"]
+position = Vector2(2275.75, -999.25)
+rotation = -0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pq14p")
+
+[node name="Candy" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(758, 1790)
+
+[node name="Candy2" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(1754, 1797)
+
+[node name="Candy3" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(1044, 911)
+
+[node name="Candy4" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(1447, 913)
+
+[node name="Candy5" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(755, 1559)
+
+[node name="Candy6" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(1755, 1560)
+
+[node name="Candy7" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(-67, -485)
+
+[node name="Candy8" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(-65, -385)
+
+[node name="Candy9" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(-66, -271)
+
+[node name="Candy10" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(1249, -362)
+
 [node name="EnemyPatrol" parent="." instance=ExtResource("3_hg2uv")]
 position = Vector2(1142, 1512)
 speed = 390.0
@@ -155,112 +291,6 @@ speed = 400.0
 max_time = 1.0
 direction = -1
 
-[node name="wall1" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall1"]
-position = Vector2(1259, 2480)
-shape = SubResource("RectangleShape2D_1r4fx")
-
-[node name="wall2" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
-position = Vector2(653, 1761)
-shape = SubResource("RectangleShape2D_wc0lq")
-
-[node name="wall3" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall3"]
-position = Vector2(1850.5, 1753)
-shape = SubResource("RectangleShape2D_yrmdt")
-
-[node name="wall4" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall4"]
-position = Vector2(820.25, 1062)
-shape = SubResource("RectangleShape2D_acg70")
-
-[node name="wall5" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall5"]
-position = Vector2(1686, 1060.5)
-shape = SubResource("RectangleShape2D_tjh30")
-
-[node name="wall6" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall6"]
-position = Vector2(796.5, 2245)
-shape = SubResource("RectangleShape2D_hg2uv")
-
-[node name="wall7" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall7"]
-position = Vector2(1259, 2245)
-shape = SubResource("RectangleShape2D_cd2oc")
-
-[node name="wall8" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall8"]
-position = Vector2(1708.5, 2245)
-shape = SubResource("RectangleShape2D_tw8r4")
-
-[node name="wall9" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall9"]
-position = Vector2(1254.5, 1061)
-shape = SubResource("RectangleShape2D_78mme")
-
-[node name="wall10" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall10"]
-position = Vector2(948, 517.5)
-shape = SubResource("RectangleShape2D_s4aci")
-
-[node name="wall11" type="StaticBody2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall11"]
-position = Vector2(1545, 510.5)
-shape = SubResource("RectangleShape2D_taia3")
-
-[node name="Candy" parent="." instance=ExtResource("7_wc0lq")]
-position = Vector2(758, 1790)
-
-[node name="Candy2" parent="." instance=ExtResource("7_wc0lq")]
-position = Vector2(1754, 1797)
-
-[node name="Candy3" parent="." instance=ExtResource("7_wc0lq")]
-position = Vector2(1044, 911)
-
-[node name="Candy4" parent="." instance=ExtResource("7_wc0lq")]
-position = Vector2(1447, 913)
-
-[node name="Candy5" parent="." instance=ExtResource("7_wc0lq")]
-position = Vector2(755, 1559)
-
-[node name="Candy6" parent="." instance=ExtResource("7_wc0lq")]
-position = Vector2(1755, 1560)
-
 [node name="EnemyPatrol9" parent="." instance=ExtResource("5_cd2oc")]
 position = Vector2(1019, 647)
 scale = Vector2(0.3, 0.3)
@@ -305,6 +335,66 @@ min_time = 1.3
 max_time = 1.3
 direction = -1
 
+[node name="EnemyPatrol16" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(746, -495)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
+[node name="EnemyPatrol17" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(668, -462)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
+[node name="EnemyPatrol18" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(591, -428)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
+[node name="EnemyPatrol19" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(517, -389)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
+[node name="EnemyPatrol20" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(443, -355)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
+[node name="EnemyPatrol21" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(373, -325)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
+[node name="EnemyPatrol22" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(301, -289)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
+[node name="EnemyPatrol23" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(229, -252)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
+[node name="EnemyPatrol24" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(159, -220)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
+[node name="EnemyPatrol25" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(824, -527)
+scale = Vector2(0.2, 0.2)
+min_time = 2.0
+max_time = 2.0
+
 [node name="Player" parent="." instance=ExtResource("2_eu8yo")]
-position = Vector2(1256, 2364)
+position = Vector2(1260, 2358)
 base_speed = 300.0
