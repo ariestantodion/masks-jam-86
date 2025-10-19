@@ -87,8 +87,8 @@ func _try_activate_invisibility() -> void:
 	# 3️⃣ Activate invisibility visuals + collision disable
 	is_invisible = true
 	sprite.modulate.a = 0.3
-	get_node("CollisionShape2D").set_deferred("disabled", true)
-
+	collision_layer = 2
+	collision_mask = 2
 	# Optional feedback
 	_show_toast("Invisibility activated!")
 	print("Invisibility active for", duration, "seconds")
@@ -101,8 +101,8 @@ func _on_invisibility_timeout() -> void:
 	# 1️⃣ Restore visuals and collisions
 	is_invisible = false
 	sprite.modulate.a = 1.0
-	get_node("CollisionShape2D").set_deferred("disabled", false)
-
+	collision_layer = 1
+	collision_mask = 1
 	_show_toast("Invisibility ended")
 	print("Invisibility ended")
 
