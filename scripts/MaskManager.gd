@@ -23,7 +23,7 @@ const MAX_INVIS_LEVEL := 3
 
 # --- Level Progression ---
 var house_progress: int = 0     # 0 = none cleared, 1 = House_1, 2 = House_2, 3 = House_3
-var last_house_index: int = 1   # remembers which house the player exited
+var last_house_index: int = 0   # 0 = starting fresh, sets spawn to 1   # remembers which house the player exited
 
 func mark_house_cleared(index: int) -> void:
 	if index == house_progress + 1:

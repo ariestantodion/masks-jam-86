@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bbei1uwgpw8rt"]
+[gd_scene load_steps=40 format=3 uid="uid://bbei1uwgpw8rt"]
 
 [ext_resource type="Shader" uid="uid://bc3oulvfgdmvj" path="res://scripts/House_4.gdshader" id="1_4cgkx"]
 [ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="2_8gh1c"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://copx3dgoe5k3x" path="res://scenes/Enemies/EnemyPatrolVertical.tscn" id="6_t4shd"]
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="7_gfdgo"]
 [ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="8_8gh1c"]
+[ext_resource type="AudioStream" uid="uid://8wlg5bcq4nc1" path="res://audio/house_theme.mp3" id="9_58cpp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hg2uv"]
 shader = ExtResource("1_4cgkx")
@@ -108,6 +109,7 @@ offset_right = 2109.0
 offset_bottom = -182.0
 
 [node name="ColorRect" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 839.0
 offset_top = 1643.0
 offset_right = 1982.0
@@ -115,6 +117,7 @@ offset_bottom = 3035.0
 
 [node name="ColorRect2" type="ColorRect" parent="Floor"]
 material = SubResource("ShaderMaterial_hg2uv")
+layout_mode = 0
 offset_left = 1316.0
 offset_top = 2117.0
 offset_right = 1506.0
@@ -131,6 +134,7 @@ position = Vector2(-1, -4)
 shape = SubResource("CircleShape2D_cd2oc")
 
 [node name="ColorRect3" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 1250.0
 offset_top = 2790.0
 offset_right = 1586.0
@@ -138,6 +142,7 @@ offset_bottom = 2830.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 839.0
 offset_top = 2790.0
 offset_right = 1097.0
@@ -145,6 +150,7 @@ offset_bottom = 2830.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 1724.0
 offset_top = 2790.0
 offset_right = 1982.0
@@ -152,12 +158,14 @@ offset_bottom = 2830.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 1133.0
 offset_top = 281.0
 offset_right = 1671.0
 offset_bottom = 1643.0
 
 [node name="ColorRect7" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 1277.0
 offset_top = 1606.0
 offset_right = 1550.0
@@ -165,6 +173,7 @@ offset_bottom = 1646.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 1966.0
 offset_top = 81.0
 offset_right = 3290.0
@@ -172,6 +181,7 @@ offset_bottom = 508.0
 rotation = -0.786193
 
 [node name="ColorRect12" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 2634.0
 offset_top = -1248.0
 offset_right = 2666.0
@@ -179,18 +189,21 @@ offset_bottom = -936.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect11" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 2666.0
 offset_top = -967.0
 offset_right = 3204.0
 offset_bottom = -554.0
 
 [node name="ColorRect10" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 2271.0
 offset_top = -2414.0
 offset_right = 3611.0
 offset_bottom = -936.0
 
 [node name="ColorRect17" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 2836.0
 offset_top = -963.0
 offset_right = 3046.0
@@ -198,6 +211,7 @@ offset_bottom = -939.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect14" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 2633.0
 offset_top = -1814.0
 offset_right = 2665.0
@@ -205,6 +219,7 @@ offset_bottom = -1409.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect16" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 2633.0
 offset_top = -1815.0
 offset_right = 3236.0
@@ -212,6 +227,7 @@ offset_bottom = -1779.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect15" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 3204.0
 offset_top = -1814.0
 offset_right = 3236.0
@@ -219,6 +235,7 @@ offset_bottom = -1409.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect13" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 3204.0
 offset_top = -1248.0
 offset_right = 3236.0
@@ -226,6 +243,7 @@ offset_bottom = -936.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect18" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 3204.0
 offset_top = -1248.0
 offset_right = 3236.0
@@ -233,6 +251,7 @@ offset_bottom = -936.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="ColorRect19" type="ColorRect" parent="Floor"]
+layout_mode = 0
 offset_left = 2634.0
 offset_top = -1248.0
 offset_right = 2666.0
@@ -646,3 +665,8 @@ position = Vector2(3019, -2558)
 speed = 400.0
 min_time = 0.6
 max_time = 0.6
+
+[node name="BGM_Player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_58cpp")
+autoplay = true
+parameters/looping = true

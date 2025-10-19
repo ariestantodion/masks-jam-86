@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://f5xw6bdiv0wc"]
+[gd_scene load_steps=10 format=3 uid="uid://f5xw6bdiv0wc"]
 
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_o2hn0"]
 [ext_resource type="Script" uid="uid://c6jvt7j1uwl75" path="res://scripts/House_1.gd" id="1_oqmcw"]
 [ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="2_8hhbx"]
 [ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/Enemies/EnemyPatrol.tscn" id="4_hynay"]
 [ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="5_8co1o"]
+[ext_resource type="AudioStream" uid="uid://8wlg5bcq4nc1" path="res://audio/house_theme.mp3" id="6_4iehd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hhbx"]
 size = Vector2(667, 2250)
@@ -86,3 +87,8 @@ position = Vector2(313, 122)
 
 [node name="Candy5" parent="." instance=ExtResource("5_8co1o")]
 position = Vector2(99, 513)
+
+[node name="BGM_Player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_4iehd")
+autoplay = true
+parameters/looping = true

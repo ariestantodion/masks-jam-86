@@ -57,9 +57,9 @@ show_percentage = false
 
 [node name="PromptLabel" type="Label" parent="."]
 modulate = Color(1, 0, 0, 1)
-offset_left = 855.0
-offset_top = 668.0
-offset_right = 1185.0
-offset_bottom = 698.0
+offset_left = 792.0
+offset_top = 667.0
+offset_right = 1267.0
+offset_bottom = 697.0
 theme_override_font_sizes/font_size = 21
-text = "Press [U] to open Upgrade Menu"
+text = "[U] = Upgrade Menu (Only available in street)"

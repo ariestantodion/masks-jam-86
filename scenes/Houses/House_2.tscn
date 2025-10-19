@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ctiwpktahej53"]
+[gd_scene load_steps=10 format=3 uid="uid://ctiwpktahej53"]
 
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_usn3g"]
 [ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/Enemies/EnemyPatrol.tscn" id="2_usn3g"]
 [ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="2_ylm2s"]
 [ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="4_ylm2s"]
+[ext_resource type="AudioStream" uid="uid://8wlg5bcq4nc1" path="res://audio/house_theme.mp3" id="5_sakxu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyo3h"]
 size = Vector2(66, 2151)
@@ -128,3 +129,8 @@ position = Vector2(218, 1516)
 
 [node name="Player" parent="." instance=ExtResource("1_usn3g")]
 position = Vector2(394, 1990)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_sakxu")
+autoplay = true
+parameters/looping = true

@@ -18,11 +18,11 @@ text = "VICTORY"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 827.0
-offset_top = 381.0
-offset_right = 961.0
-offset_bottom = 421.0
-scale = Vector2(1.42, 1.42)
+offset_left = 395.0
+offset_top = 423.0
+offset_right = 529.0
+offset_bottom = 463.0
+scale = Vector2(3.72, 3.72)
 
 [node name="PlayAgain" type="Button" parent="HBoxContainer"]
 unique_name_in_owner = true
