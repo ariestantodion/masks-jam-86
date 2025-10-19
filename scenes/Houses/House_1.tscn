@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_o2hn0"]
 [ext_resource type="Script" uid="uid://c6jvt7j1uwl75" path="res://scripts/House_1.gd" id="1_oqmcw"]
 [ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="2_8hhbx"]
-[ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/EnemyPatrol.tscn" id="4_hynay"]
+[ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/Enemies/EnemyPatrol.tscn" id="4_hynay"]
 [ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="5_8co1o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hhbx"]
@@ -24,7 +24,7 @@ offset_right = 943.0
 offset_bottom = 720.0
 
 [node name="Player" parent="." instance=ExtResource("1_o2hn0")]
-position = Vector2(164, 296)
+position = Vector2(488, 615)
 
 [node name="PlayerSpawn" type="Marker2D" parent="."]
 position = Vector2(488, 616)

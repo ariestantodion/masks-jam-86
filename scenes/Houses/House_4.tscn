@@ -1,11 +1,11 @@
-[gd_scene load_steps=37 format=3 uid="uid://bbei1uwgpw8rt"]
+[gd_scene load_steps=39 format=3 uid="uid://bbei1uwgpw8rt"]
 
 [ext_resource type="Shader" uid="uid://bc3oulvfgdmvj" path="res://scripts/House_4.gdshader" id="1_4cgkx"]
 [ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="2_8gh1c"]
-[ext_resource type="PackedScene" uid="uid://dh2taq85s0bos" path="res://scenes/EnemyPatrolDiagonalBackward.tscn" id="3_58cpp"]
-[ext_resource type="PackedScene" uid="uid://bovg2p8r4bk43" path="res://scenes/EnemyPatrolDiagonalForward.tscn" id="4_8khiy"]
-[ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/EnemyPatrol.tscn" id="5_xsa04"]
-[ext_resource type="PackedScene" uid="uid://copx3dgoe5k3x" path="res://scenes/EnemyPatrolVertical.tscn" id="6_t4shd"]
+[ext_resource type="PackedScene" uid="uid://dh2taq85s0bos" path="res://scenes/Enemies/EnemyPatrolDiagonalBackward.tscn" id="3_58cpp"]
+[ext_resource type="PackedScene" uid="uid://bovg2p8r4bk43" path="res://scenes/Enemies/EnemyPatrolDiagonalForward.tscn" id="4_8khiy"]
+[ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/Enemies/EnemyPatrol.tscn" id="5_xsa04"]
+[ext_resource type="PackedScene" uid="uid://copx3dgoe5k3x" path="res://scenes/Enemies/EnemyPatrolVertical.tscn" id="6_t4shd"]
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="7_gfdgo"]
 [ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="8_8gh1c"]
 
@@ -93,130 +93,166 @@ size = Vector2(32, 381)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqgy7"]
 size = Vector2(30, 378.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gh1c"]
+size = Vector2(1539, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58cpp"]
+size = Vector2(955, 40)
+
 [node name="House4" type="Node2D"]
 
-[node name="ColorRect8" type="ColorRect" parent="."]
+[node name="Floor" type="ColorRect" parent="."]
 offset_left = -159.0
 offset_top = -565.0
 offset_right = 2109.0
 offset_bottom = -182.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 680.0
-offset_top = 1078.0
-offset_right = 1823.0
-offset_bottom = 2470.0
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+offset_left = 839.0
+offset_top = 1643.0
+offset_right = 1982.0
+offset_bottom = 3035.0
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="Floor"]
 material = SubResource("ShaderMaterial_hg2uv")
-offset_left = 1157.0
-offset_top = 1552.0
-offset_right = 1347.0
-offset_bottom = 1742.0
+offset_left = 1316.0
+offset_top = 2117.0
+offset_right = 1506.0
+offset_bottom = 2307.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="ColorRect2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor/ColorRect2"]
 position = Vector2(96, 99)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect2/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/ColorRect2/StaticBody2D"]
 position = Vector2(-1, -4)
 shape = SubResource("CircleShape2D_cd2oc")
 
-[node name="ColorRect3" type="ColorRect" parent="."]
-offset_left = 1091.0
-offset_top = 2225.0
-offset_right = 1427.0
-offset_bottom = 2265.0
+[node name="ColorRect3" type="ColorRect" parent="Floor"]
+offset_left = 1250.0
+offset_top = 2790.0
+offset_right = 1586.0
+offset_bottom = 2830.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="ColorRect4" type="ColorRect" parent="."]
-offset_left = 680.0
-offset_top = 2225.0
-offset_right = 938.0
-offset_bottom = 2265.0
+[node name="ColorRect4" type="ColorRect" parent="Floor"]
+offset_left = 839.0
+offset_top = 2790.0
+offset_right = 1097.0
+offset_bottom = 2830.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="."]
-offset_left = 1565.0
-offset_top = 2225.0
-offset_right = 1823.0
-offset_bottom = 2265.0
+[node name="ColorRect5" type="ColorRect" parent="Floor"]
+offset_left = 1724.0
+offset_top = 2790.0
+offset_right = 1982.0
+offset_bottom = 2830.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="ColorRect6" type="ColorRect" parent="."]
-offset_left = 974.0
-offset_top = -284.0
-offset_right = 1512.0
-offset_bottom = 1078.0
+[node name="ColorRect6" type="ColorRect" parent="Floor"]
+offset_left = 1133.0
+offset_top = 281.0
+offset_right = 1671.0
+offset_bottom = 1643.0
 
-[node name="ColorRect7" type="ColorRect" parent="."]
-offset_left = 1118.0
-offset_top = 1041.0
-offset_right = 1391.0
-offset_bottom = 1081.0
+[node name="ColorRect7" type="ColorRect" parent="Floor"]
+offset_left = 1277.0
+offset_top = 1606.0
+offset_right = 1550.0
+offset_bottom = 1646.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="ColorRect9" type="ColorRect" parent="."]
-offset_left = 1807.0
-offset_top = -484.0
-offset_right = 3131.0
-offset_bottom = -57.0
+[node name="ColorRect9" type="ColorRect" parent="Floor"]
+offset_left = 1966.0
+offset_top = 81.0
+offset_right = 3290.0
+offset_bottom = 508.0
 rotation = -0.786193
 
-[node name="ColorRect10" type="ColorRect" parent="."]
-offset_left = 2112.0
-offset_top = -2979.0
-offset_right = 3452.0
-offset_bottom = -1501.0
-
-[node name="ColorRect11" type="ColorRect" parent="."]
-offset_left = 2507.0
-offset_top = -1532.0
-offset_right = 3045.0
-offset_bottom = -1119.0
-
-[node name="ColorRect12" type="ColorRect" parent="."]
-offset_left = 2475.0
-offset_top = -1813.0
-offset_right = 2507.0
-offset_bottom = -1501.0
+[node name="ColorRect12" type="ColorRect" parent="Floor"]
+offset_left = 2634.0
+offset_top = -1248.0
+offset_right = 2666.0
+offset_bottom = -936.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="ColorRect17" type="ColorRect" parent="."]
-offset_left = 2677.0
-offset_top = -1528.0
-offset_right = 2887.0
-offset_bottom = -1504.0
+[node name="ColorRect11" type="ColorRect" parent="Floor"]
+offset_left = 2666.0
+offset_top = -967.0
+offset_right = 3204.0
+offset_bottom = -554.0
+
+[node name="ColorRect10" type="ColorRect" parent="Floor"]
+offset_left = 2271.0
+offset_top = -2414.0
+offset_right = 3611.0
+offset_bottom = -936.0
+
+[node name="ColorRect17" type="ColorRect" parent="Floor"]
+offset_left = 2836.0
+offset_top = -963.0
+offset_right = 3046.0
+offset_bottom = -939.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="ColorRect14" type="ColorRect" parent="."]
-offset_left = 2474.0
-offset_top = -2379.0
-offset_right = 2506.0
-offset_bottom = -1974.0
+[node name="ColorRect14" type="ColorRect" parent="Floor"]
+offset_left = 2633.0
+offset_top = -1814.0
+offset_right = 2665.0
+offset_bottom = -1409.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="ColorRect16" type="ColorRect" parent="."]
-offset_left = 2474.0
-offset_top = -2380.0
-offset_right = 3077.0
-offset_bottom = -2344.0
+[node name="ColorRect16" type="ColorRect" parent="Floor"]
+offset_left = 2633.0
+offset_top = -1815.0
+offset_right = 3236.0
+offset_bottom = -1779.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="ColorRect15" type="ColorRect" parent="."]
-offset_left = 3045.0
-offset_top = -2379.0
-offset_right = 3077.0
-offset_bottom = -1974.0
+[node name="ColorRect15" type="ColorRect" parent="Floor"]
+offset_left = 3204.0
+offset_top = -1814.0
+offset_right = 3236.0
+offset_bottom = -1409.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
-[node name="ColorRect13" type="ColorRect" parent="."]
-offset_left = 3045.0
-offset_top = -1813.0
-offset_right = 3077.0
-offset_bottom = -1501.0
+[node name="ColorRect13" type="ColorRect" parent="Floor"]
+offset_left = 3204.0
+offset_top = -1248.0
+offset_right = 3236.0
+offset_bottom = -936.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="Floor"]
+offset_left = 3204.0
+offset_top = -1248.0
+offset_right = 3236.0
+offset_bottom = -936.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="Floor"]
+offset_left = 2634.0
+offset_top = -1248.0
+offset_right = 2666.0
+offset_bottom = -936.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Floor"]
+layout_mode = 0
+offset_left = 1746.0
+offset_top = -2187.0
+offset_right = 2802.0
+offset_bottom = -2147.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="Floor"]
+layout_mode = 0
+offset_left = 3081.0
+offset_top = -2192.0
+offset_right = 4137.0
+offset_bottom = -2152.0
 color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="walls" type="StaticBody2D" parent="."]
@@ -318,7 +354,7 @@ position = Vector2(2491, -1657)
 shape = SubResource("RectangleShape2D_lfwce")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="walls"]
-position = Vector2(3061, -1647.5)
+position = Vector2(3061, -1648)
 shape = SubResource("RectangleShape2D_sykqx")
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="walls"]
@@ -333,8 +369,25 @@ shape = SubResource("RectangleShape2D_nkpw8")
 position = Vector2(3061, -2163.25)
 shape = SubResource("RectangleShape2D_rqgy7")
 
-[node name="Candy" parent="." instance=ExtResource("2_8gh1c")]
-position = Vector2(758, 1790)
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="walls"]
+position = Vector2(2775, -2989)
+shape = SubResource("RectangleShape2D_8gh1c")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="walls"]
+position = Vector2(2165, -2732)
+shape = SubResource("RectangleShape2D_58cpp")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="walls"]
+position = Vector2(3400, -2737)
+shape = SubResource("RectangleShape2D_58cpp")
+
+[node name="Pumpkin" parent="." instance=ExtResource("8_8gh1c")]
+position = Vector2(2775, -2906)
+house_index = 4
+
+[node name="Player" parent="." instance=ExtResource("7_gfdgo")]
+position = Vector2(1263, 2362)
+base_speed = 300.0
 
 [node name="Candy2" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(1754, 1797)
@@ -363,11 +416,14 @@ position = Vector2(-66, -271)
 [node name="Candy10" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(1249, -362)
 
-[node name="EnemyPatrol" parent="." instance=ExtResource("3_58cpp")]
-position = Vector2(1142, 1512)
-speed = 390.0
-max_time = 1.0
-direction = -1
+[node name="Candy11" parent="." instance=ExtResource("2_8gh1c")]
+position = Vector2(2276, -1598)
+
+[node name="Candy12" parent="." instance=ExtResource("2_8gh1c")]
+position = Vector2(3272, -1608)
+
+[node name="Candy" parent="." instance=ExtResource("2_8gh1c")]
+position = Vector2(758, 1790)
 
 [node name="EnemyPatrol2" parent="." instance=ExtResource("4_8khiy")]
 position = Vector2(1364, 1512)
@@ -418,6 +474,12 @@ scale = Vector2(0.3, 0.3)
 speed = 350.0
 min_time = 1.3
 max_time = 1.3
+
+[node name="EnemyPatrol" parent="." instance=ExtResource("3_58cpp")]
+position = Vector2(1142, 1512)
+speed = 390.0
+max_time = 1.0
+direction = -1
 
 [node name="EnemyPatrol10" parent="." instance=ExtResource("5_xsa04")]
 position = Vector2(1467, 512)
@@ -523,16 +585,64 @@ speed = 350.0
 min_time = 1.5
 max_time = 2.5
 
-[node name="Player" parent="." instance=ExtResource("7_gfdgo")]
-position = Vector2(2766, -1361)
-base_speed = 300.0
+[node name="EnemyPatrol26" parent="." instance=ExtResource("5_xsa04")]
+position = Vector2(2283, -1763)
+scale = Vector2(0.4, 0.4)
+speed = 400.0
+min_time = 0.6
+max_time = 0.6
 
-[node name="Candy11" parent="." instance=ExtResource("2_8gh1c")]
-position = Vector2(2276, -1598)
+[node name="EnemyPatrol28" parent="." instance=ExtResource("5_xsa04")]
+position = Vector2(2285, -2307)
+scale = Vector2(0.4, 0.4)
+speed = 400.0
+min_time = 0.6
+max_time = 0.6
 
-[node name="Candy12" parent="." instance=ExtResource("2_8gh1c")]
-position = Vector2(3272, -1608)
+[node name="EnemyPatrol29" parent="." instance=ExtResource("5_xsa04")]
+position = Vector2(3266, -2310)
+scale = Vector2(0.4, 0.4)
+speed = 400.0
+min_time = 0.6
+max_time = 0.6
 
-[node name="Pumpkin" parent="." instance=ExtResource("8_8gh1c")]
-position = Vector2(1255, 2367)
-house_index = 4
+[node name="EnemyPatrol27" parent="." instance=ExtResource("5_xsa04")]
+position = Vector2(3275, -1760)
+scale = Vector2(0.4, 0.4)
+speed = 400.0
+min_time = 0.6
+max_time = 0.6
+
+[node name="EnemyPatrol30" parent="." instance=ExtResource("3_58cpp")]
+position = Vector2(2126, -486)
+scale = Vector2(0.6, 0.6)
+speed = 400.0
+min_time = 0.6
+max_time = 0.6
+
+[node name="EnemyPatrol31" parent="." instance=ExtResource("3_58cpp")]
+position = Vector2(2362, -727)
+scale = Vector2(0.6, 0.6)
+speed = 400.0
+min_time = 0.6
+max_time = 0.6
+direction = -1
+
+[node name="EnemyPatrol32" parent="." instance=ExtResource("3_58cpp")]
+position = Vector2(2605, -994)
+scale = Vector2(0.6, 0.6)
+speed = 400.0
+min_time = 0.6
+max_time = 0.6
+
+[node name="EnemyPatrol33" parent="." instance=ExtResource("6_t4shd")]
+position = Vector2(2558, -2563)
+speed = 400.0
+min_time = 0.6
+max_time = 0.6
+
+[node name="EnemyPatrol34" parent="." instance=ExtResource("6_t4shd")]
+position = Vector2(3019, -2558)
+speed = 400.0
+min_time = 0.6
+max_time = 0.6

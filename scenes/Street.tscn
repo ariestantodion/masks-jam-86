@@ -1,18 +1,223 @@
-[gd_scene load_steps=8 format=3 uid="uid://4wq6cqbxa5u6"]
+[gd_scene load_steps=22 format=3 uid="uid://4wq6cqbxa5u6"]
 
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="1_1kily"]
 [ext_resource type="Script" uid="uid://cwan7blw8xqmm" path="res://scripts/Street.gd" id="1_od4y3"]
 [ext_resource type="PackedScene" uid="uid://c4rg7pvvp2wv1" path="res://scenes/Doors/Door_1.tscn" id="2_1srjd"]
+[ext_resource type="Texture2D" uid="uid://b4rq13eyw6302" path="res://art/grass.png" id="2_3cjue"]
+[ext_resource type="Texture2D" uid="uid://drns4h51560si" path="res://art/sidewalk.png" id="2_8kx4l"]
 [ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="3_0sq60"]
+[ext_resource type="Texture2D" uid="uid://ciikonl0qdpn6" path="res://art/walkway.png" id="3_3cjue"]
+[ext_resource type="Texture2D" uid="uid://da7aycfxv2aqf" path="res://art/house.png" id="3_v3kon"]
 [ext_resource type="PackedScene" uid="uid://bh2aj4ufq170f" path="res://scenes/Doors/Door_2.tscn" id="4_u30qc"]
 [ext_resource type="PackedScene" uid="uid://bx2fmcuncgtl5" path="res://scenes/Doors/Door_3.tscn" id="5_od4y3"]
 [ext_resource type="PackedScene" uid="uid://dpg5wk87iiue8" path="res://scenes/Doors/Door.tscn" id="7_meer4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldrwv"]
+size = Vector2(185, 1804)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4umer"]
+size = Vector2(676, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kx4l"]
+size = Vector2(3072, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cjue"]
+size = Vector2(444, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4lcq"]
+size = Vector2(458, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8075"]
+size = Vector2(453, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnmh4"]
+size = Vector2(834.5, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7d4g"]
+size = Vector2(173, 258)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hupy"]
+size = Vector2(35, 345.211)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e1fw"]
+size = Vector2(319.436, 20)
+
 [node name="Street" type="Node2D"]
 script = ExtResource("1_od4y3")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 109.0
+offset_top = -1711.0
+offset_right = 2744.0
+offset_bottom = -364.0
+
+[node name="Grass" type="Sprite2D" parent="."]
+position = Vector2(658, -754)
+texture = ExtResource("2_3cjue")
+
+[node name="Grass3" type="Sprite2D" parent="Grass"]
+position = Vector2(1425.5, -115)
+scale = Vector2(1.00076, 1)
+texture = ExtResource("2_3cjue")
+
+[node name="Grass4" type="Sprite2D" parent="Grass"]
+position = Vector2(0, -207)
+texture = ExtResource("2_3cjue")
+
+[node name="Grass5" type="Sprite2D" parent="Grass"]
+position = Vector2(0, -408)
+texture = ExtResource("2_3cjue")
+
+[node name="Grass6" type="Sprite2D" parent="Grass"]
+position = Vector2(1182, -360)
+texture = ExtResource("2_3cjue")
+
+[node name="Grass7" type="Sprite2D" parent="Grass"]
+position = Vector2(1426, -444)
+texture = ExtResource("2_3cjue")
+
+[node name="Grass8" type="Sprite2D" parent="Grass"]
+position = Vector2(657, -452)
+texture = ExtResource("2_3cjue")
+
+[node name="Grass2" type="Sprite2D" parent="Grass"]
+position = Vector2(687, -44)
+texture = ExtResource("2_3cjue")
+
+[node name="Sidewalk" type="Sprite2D" parent="."]
+position = Vector2(272, -540)
+texture = ExtResource("2_8kx4l")
+
+[node name="Sidewalk2" type="Sprite2D" parent="Sidewalk"]
+position = Vector2(549, 0)
+texture = ExtResource("2_8kx4l")
+
+[node name="Sidewalk3" type="Sprite2D" parent="Sidewalk"]
+position = Vector2(1098, 0)
+texture = ExtResource("2_8kx4l")
+
+[node name="Sidewalk" type="Sprite2D" parent="Sidewalk"]
+position = Vector2(1647, 0)
+texture = ExtResource("2_8kx4l")
+
+[node name="Sidewalk4" type="Sprite2D" parent="Sidewalk"]
+position = Vector2(2196.5, 0)
+scale = Vector2(1.00076, 1)
+texture = ExtResource("2_8kx4l")
+
+[node name="Walkway" type="Sprite2D" parent="Sidewalk"]
+position = Vector2(281, -31)
+texture = ExtResource("3_3cjue")
+
+[node name="Walkway2" type="Sprite2D" parent="Sidewalk"]
+position = Vector2(828, -31)
+texture = ExtResource("3_3cjue")
+
+[node name="Walkway3" type="Sprite2D" parent="Sidewalk"]
+position = Vector2(1378, -31)
+texture = ExtResource("3_3cjue")
+
+[node name="Walkway4" type="Sprite2D" parent="Sidewalk"]
+position = Vector2(1926, -31)
+texture = ExtResource("3_3cjue")
+
 [node name="Player" parent="." instance=ExtResource("1_1kily")]
-position = Vector2(150, 125)
+position = Vector2(42, -462)
+
+[node name="Houses" type="Sprite2D" parent="."]
+position = Vector2(671, -975)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_v3kon")
+
+[node name="House_2" type="Sprite2D" parent="Houses"]
+position = Vector2(911.667, 0.00012207)
+texture = ExtResource("3_v3kon")
+
+[node name="House_3" type="Sprite2D" parent="Houses"]
+position = Vector2(1821.67, -1.66663)
+texture = ExtResource("3_v3kon")
+
+[node name="House_4" type="Sprite2D" parent="Houses"]
+position = Vector2(2736.67, -1.66663)
+texture = ExtResource("3_v3kon")
+
+[node name="map_bounds" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(-94.5, -892)
+shape = SubResource("RectangleShape2D_ldrwv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(173, -534)
+shape = SubResource("RectangleShape2D_4umer")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(1516, -329)
+shape = SubResource("RectangleShape2D_8kx4l")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(1501, -774)
+shape = SubResource("RectangleShape2D_8kx4l")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(837, -525)
+shape = SubResource("RectangleShape2D_3cjue")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(1382, -518)
+shape = SubResource("RectangleShape2D_c4lcq")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(1930.5, -517)
+shape = SubResource("RectangleShape2D_x8075")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(2667.25, -517)
+shape = SubResource("RectangleShape2D_qnmh4")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(2830.5, -453)
+shape = SubResource("RectangleShape2D_t7d4g")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(570.13, -677.411)
+rotation = 0.438153
+shape = SubResource("RectangleShape2D_4hupy")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(1117, -677)
+rotation = 0.438153
+shape = SubResource("RectangleShape2D_4hupy")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(1667, -676)
+rotation = 0.438153
+shape = SubResource("RectangleShape2D_4hupy")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(2214, -676)
+rotation = 0.438153
+shape = SubResource("RectangleShape2D_4hupy")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(679, -663)
+rotation = -1.14969
+shape = SubResource("RectangleShape2D_0e1fw")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(1227, -664)
+rotation = -1.14969
+shape = SubResource("RectangleShape2D_0e1fw")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(1777, -663)
+rotation = -1.14969
+shape = SubResource("RectangleShape2D_0e1fw")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="map_bounds"]
+position = Vector2(2325, -663)
+rotation = -1.14969
+shape = SubResource("RectangleShape2D_0e1fw")
 
 [node name="(Street) Candies" type="Node2D" parent="."]
 
@@ -32,29 +237,31 @@ position = Vector2(-224, 76)
 position = Vector2(-138, 333)
 
 [node name="Door_1" parent="." instance=ExtResource("2_1srjd")]
-position = Vector2(331, -62)
+position = Vector2(673, -847)
+rotation = 0.00617631
+scale = Vector2(1, 1)
 target_house = "uid://f5xw6bdiv0wc"
 
 [node name="Door_2" parent="." instance=ExtResource("4_u30qc")]
-position = Vector2(624, -64)
+position = Vector2(1220, -847)
 target_house = "uid://ctiwpktahej53"
 
 [node name="Door_3" parent="." instance=ExtResource("5_od4y3")]
-position = Vector2(908, -59)
+position = Vector2(1767, -848)
 
 [node name="Door_4" parent="." instance=ExtResource("7_meer4")]
-position = Vector2(1178, -58)
+position = Vector2(2316, -848)
 target_house = "uid://bbei1uwgpw8rt"
 house_index = 4
 
 [node name="Spawn1" type="Marker2D" parent="."]
-position = Vector2(150, 125)
+position = Vector2(42, -462)
 
 [node name="Spawn2" type="Marker2D" parent="."]
-position = Vector2(331, 87)
+position = Vector2(647, -725)
 
 [node name="Spawn3" type="Marker2D" parent="."]
-position = Vector2(628, 83)
+position = Vector2(1201, -731)
 
 [node name="Spawn4" type="Marker2D" parent="."]
-position = Vector2(912, 91)
+position = Vector2(1749, -728)

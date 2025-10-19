@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://vw4q8t7lp40b"]
 
-[ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/EnemyPatrol.tscn" id="1_p3gg2"]
-[ext_resource type="PackedScene" uid="uid://copx3dgoe5k3x" path="res://scenes/EnemyPatrolVertical.tscn" id="2_yrlkb"]
+[ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/Enemies/EnemyPatrol.tscn" id="1_p3gg2"]
+[ext_resource type="PackedScene" uid="uid://copx3dgoe5k3x" path="res://scenes/Enemies/EnemyPatrolVertical.tscn" id="2_yrlkb"]
 [ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="3_a5pss"]
 [ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="4_mom5e"]
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="5_1c1w0"]
