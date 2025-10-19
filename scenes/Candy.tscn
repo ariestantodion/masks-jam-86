@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b00b0eq641rgt"]
 
-[ext_resource type="Script" uid="uid://bx10t7o0ne0gf" path="res://scripts/candy.gd" id="1_wg2qc"]
+[ext_resource type="Script" uid="uid://bx10t7o0ne0gf" path="res://scripts/Candy.gd" id="1_wg2qc"]
 [ext_resource type="Texture2D" uid="uid://dv5xire4d3pj1" path="res://art/candy.png" id="2_ync5j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g1wbm"]

@@ -9,7 +9,7 @@ func _on_body_entered(body: Node) -> void:
 		return
 	MaskManager.mark_house_cleared(house_index)
 	MaskManager.last_house_index = house_index
-	if MaskManager.house_progress >= 3:
+	if MaskManager.house_progress >= 4:
 		get_tree().change_scene_to_file("res://scenes/Victory.tscn")
 	else:
 		get_tree().change_scene_to_file(return_to_street)

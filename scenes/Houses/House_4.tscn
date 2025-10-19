@@ -1,15 +1,16 @@
-[gd_scene load_steps=36 format=3 uid="uid://bbei1uwgpw8rt"]
+[gd_scene load_steps=37 format=3 uid="uid://bbei1uwgpw8rt"]
 
-[ext_resource type="Shader" uid="uid://bc3oulvfgdmvj" path="res://scripts/House_4.gdshader" id="1_nog0j"]
-[ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="2_eu8yo"]
-[ext_resource type="PackedScene" uid="uid://dh2taq85s0bos" path="res://scenes/EnemyPatrolDiagonalBackward.tscn" id="3_hg2uv"]
-[ext_resource type="PackedScene" uid="uid://bovg2p8r4bk43" path="res://scenes/EnemyPatrolDiagonalForward.tscn" id="4_cd2oc"]
-[ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/EnemyPatrol.tscn" id="5_cd2oc"]
-[ext_resource type="PackedScene" uid="uid://copx3dgoe5k3x" path="res://scenes/EnemyPatrolVertical.tscn" id="6_1r4fx"]
-[ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="7_wc0lq"]
+[ext_resource type="Shader" uid="uid://bc3oulvfgdmvj" path="res://scripts/House_4.gdshader" id="1_4cgkx"]
+[ext_resource type="PackedScene" uid="uid://b00b0eq641rgt" path="res://scenes/Candy.tscn" id="2_8gh1c"]
+[ext_resource type="PackedScene" uid="uid://dh2taq85s0bos" path="res://scenes/EnemyPatrolDiagonalBackward.tscn" id="3_58cpp"]
+[ext_resource type="PackedScene" uid="uid://bovg2p8r4bk43" path="res://scenes/EnemyPatrolDiagonalForward.tscn" id="4_8khiy"]
+[ext_resource type="PackedScene" uid="uid://b055n4ijlidj1" path="res://scenes/EnemyPatrol.tscn" id="5_xsa04"]
+[ext_resource type="PackedScene" uid="uid://copx3dgoe5k3x" path="res://scenes/EnemyPatrolVertical.tscn" id="6_t4shd"]
+[ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="7_gfdgo"]
+[ext_resource type="PackedScene" uid="uid://4a2o14jjf0tw" path="res://scenes/Pumpkin.tscn" id="8_8gh1c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hg2uv"]
-shader = ExtResource("1_nog0j")
+shader = ExtResource("1_4cgkx")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cd2oc"]
 radius = 95.0053
@@ -290,7 +291,6 @@ shape = SubResource("RectangleShape2D_rkkr5")
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="walls"]
 position = Vector2(2174.25, -897.75)
 rotation = -0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pq14p")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="walls"]
@@ -333,114 +333,114 @@ shape = SubResource("RectangleShape2D_nkpw8")
 position = Vector2(3061, -2163.25)
 shape = SubResource("RectangleShape2D_rqgy7")
 
-[node name="Candy" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(758, 1790)
 
-[node name="Candy2" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy2" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(1754, 1797)
 
-[node name="Candy3" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy3" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(1044, 911)
 
-[node name="Candy4" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy4" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(1447, 913)
 
-[node name="Candy5" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy5" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(755, 1559)
 
-[node name="Candy6" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy6" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(1755, 1560)
 
-[node name="Candy7" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy7" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(-67, -485)
 
-[node name="Candy8" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy8" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(-65, -385)
 
-[node name="Candy9" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy9" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(-66, -271)
 
-[node name="Candy10" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy10" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(1249, -362)
 
-[node name="EnemyPatrol" parent="." instance=ExtResource("3_hg2uv")]
+[node name="EnemyPatrol" parent="." instance=ExtResource("3_58cpp")]
 position = Vector2(1142, 1512)
 speed = 390.0
 max_time = 1.0
 direction = -1
 
-[node name="EnemyPatrol2" parent="." instance=ExtResource("4_cd2oc")]
+[node name="EnemyPatrol2" parent="." instance=ExtResource("4_8khiy")]
 position = Vector2(1364, 1512)
 speed = 400.0
 max_time = 1.0
 
-[node name="EnemyPatrol3" parent="." instance=ExtResource("3_hg2uv")]
+[node name="EnemyPatrol3" parent="." instance=ExtResource("3_58cpp")]
 position = Vector2(1364, 1761)
 speed = 400.0
 max_time = 1.0
 
-[node name="EnemyPatrol4" parent="." instance=ExtResource("4_cd2oc")]
+[node name="EnemyPatrol4" parent="." instance=ExtResource("4_8khiy")]
 position = Vector2(1142, 1761)
 scale = Vector2(0.5, 0.503588)
 speed = 400.0
 max_time = 1.0
 direction = -1
 
-[node name="EnemyPatrol5" parent="." instance=ExtResource("5_cd2oc")]
+[node name="EnemyPatrol5" parent="." instance=ExtResource("5_xsa04")]
 position = Vector2(1376, 1643)
 scale = Vector2(0.2, 0.2)
 speed = 400.0
 max_time = 1.0
 
-[node name="EnemyPatrol6" parent="." instance=ExtResource("5_cd2oc")]
+[node name="EnemyPatrol6" parent="." instance=ExtResource("5_xsa04")]
 position = Vector2(1128, 1643)
 scale = Vector2(0.2, 0.2)
 speed = 400.0
 max_time = 1.0
 direction = -1
 
-[node name="EnemyPatrol7" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol7" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(1253, 1766)
 scale = Vector2(0.2, 0.2)
 speed = 400.0
 max_time = 1.0
 
-[node name="EnemyPatrol8" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol8" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(1253, 1519)
 scale = Vector2(0.2, 0.2)
 speed = 400.0
 max_time = 1.0
 direction = -1
 
-[node name="EnemyPatrol9" parent="." instance=ExtResource("5_cd2oc")]
+[node name="EnemyPatrol9" parent="." instance=ExtResource("5_xsa04")]
 position = Vector2(1019, 647)
 scale = Vector2(0.3, 0.3)
 speed = 350.0
 min_time = 1.3
 max_time = 1.3
 
-[node name="EnemyPatrol10" parent="." instance=ExtResource("5_cd2oc")]
+[node name="EnemyPatrol10" parent="." instance=ExtResource("5_xsa04")]
 position = Vector2(1467, 512)
 scale = Vector2(0.3, 0.3)
 speed = 350.0
 max_time = 1.3
 direction = -1
 
-[node name="EnemyPatrol11" parent="." instance=ExtResource("5_cd2oc")]
+[node name="EnemyPatrol11" parent="." instance=ExtResource("5_xsa04")]
 position = Vector2(1021, 394)
 scale = Vector2(0.3, 0.3)
 speed = 350.0
 min_time = 0.8
 max_time = 1.3
 
-[node name="EnemyPatrol13" parent="." instance=ExtResource("5_cd2oc")]
+[node name="EnemyPatrol13" parent="." instance=ExtResource("5_xsa04")]
 position = Vector2(1019, 149)
 scale = Vector2(0.3, 0.3)
 speed = 350.0
 min_time = 0.8
 max_time = 1.3
 
-[node name="EnemyPatrol12" parent="." instance=ExtResource("5_cd2oc")]
+[node name="EnemyPatrol12" parent="." instance=ExtResource("5_xsa04")]
 position = Vector2(1467, 272)
 scale = Vector2(0.3, 0.3)
 speed = 350.0
@@ -448,7 +448,7 @@ min_time = 1.3
 max_time = 1.3
 direction = -1
 
-[node name="EnemyPatrol14" parent="." instance=ExtResource("5_cd2oc")]
+[node name="EnemyPatrol14" parent="." instance=ExtResource("5_xsa04")]
 position = Vector2(1468, 28)
 scale = Vector2(0.3, 0.3)
 speed = 350.0
@@ -456,79 +456,83 @@ min_time = 1.3
 max_time = 1.3
 direction = -1
 
-[node name="EnemyPatrol16" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol16" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(746, -495)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol17" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol17" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(668, -462)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol18" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol18" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(591, -428)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol19" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol19" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(517, -389)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol20" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol20" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(443, -355)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol21" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol21" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(373, -325)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol22" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol22" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(301, -289)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol23" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol23" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(229, -252)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol24" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol24" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(159, -220)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol25" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol25" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(824, -527)
 scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
-[node name="EnemyPatrol15" parent="." instance=ExtResource("6_1r4fx")]
+[node name="EnemyPatrol15" parent="." instance=ExtResource("6_t4shd")]
 position = Vector2(2779, -2157)
 scale = Vector2(1.5, 1.5)
 speed = 350.0
 min_time = 1.5
 max_time = 2.5
 
-[node name="Player" parent="." instance=ExtResource("2_eu8yo")]
+[node name="Player" parent="." instance=ExtResource("7_gfdgo")]
 position = Vector2(2766, -1361)
 base_speed = 300.0
 
-[node name="Candy11" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy11" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(2276, -1598)
 
-[node name="Candy12" parent="." instance=ExtResource("7_wc0lq")]
+[node name="Candy12" parent="." instance=ExtResource("2_8gh1c")]
 position = Vector2(3272, -1608)
+
+[node name="Pumpkin" parent="." instance=ExtResource("8_8gh1c")]
+position = Vector2(1255, 2367)
+house_index = 4
