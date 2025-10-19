@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bbei1uwgpw8rt"]
+[gd_scene load_steps=36 format=3 uid="uid://bbei1uwgpw8rt"]
 
 [ext_resource type="Shader" uid="uid://bc3oulvfgdmvj" path="res://scripts/House_4.gdshader" id="1_nog0j"]
 [ext_resource type="PackedScene" uid="uid://bjy7ad5rmfr4s" path="res://scenes/Player.tscn" id="2_eu8yo"]
@@ -63,7 +63,34 @@ size = Vector2(577, 58)
 size = Vector2(1411.34, 69.9697)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pq14p"]
-size = Vector2(1162.48, 65.7609)
+size = Vector2(875.398, 65.7609)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wavp7"]
+size = Vector2(447, 315)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyqka"]
+size = Vector2(552, 430)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7804"]
+size = Vector2(128.25, 1621.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8mlo"]
+size = Vector2(210, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfwce"]
+size = Vector2(32, 312)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sykqx"]
+size = Vector2(32, 331)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4ovi"]
+size = Vector2(603, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkpw8"]
+size = Vector2(32, 381)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqgy7"]
+size = Vector2(30, 378.5)
 
 [node name="House4" type="Node2D"]
 
@@ -133,9 +160,63 @@ color = Color(0.408329, 0.408329, 0.408329, 1)
 [node name="ColorRect9" type="ColorRect" parent="."]
 offset_left = 1807.0
 offset_top = -484.0
-offset_right = 2834.0
+offset_right = 3131.0
 offset_bottom = -57.0
 rotation = -0.786193
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+offset_left = 2112.0
+offset_top = -2979.0
+offset_right = 3452.0
+offset_bottom = -1501.0
+
+[node name="ColorRect11" type="ColorRect" parent="."]
+offset_left = 2507.0
+offset_top = -1532.0
+offset_right = 3045.0
+offset_bottom = -1119.0
+
+[node name="ColorRect12" type="ColorRect" parent="."]
+offset_left = 2475.0
+offset_top = -1813.0
+offset_right = 2507.0
+offset_bottom = -1501.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="."]
+offset_left = 2677.0
+offset_top = -1528.0
+offset_right = 2887.0
+offset_bottom = -1504.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="."]
+offset_left = 2474.0
+offset_top = -2379.0
+offset_right = 2506.0
+offset_bottom = -1974.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="."]
+offset_left = 2474.0
+offset_top = -2380.0
+offset_right = 3077.0
+offset_bottom = -2344.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="."]
+offset_left = 3045.0
+offset_top = -2379.0
+offset_right = 3077.0
+offset_bottom = -1974.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="."]
+offset_left = 3045.0
+offset_top = -1813.0
+offset_right = 3077.0
+offset_bottom = -1501.0
+color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [node name="walls" type="StaticBody2D" parent="."]
 collision_layer = 3
@@ -207,10 +288,50 @@ rotation = -0.787477
 shape = SubResource("RectangleShape2D_rkkr5")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="walls"]
-position = Vector2(2275.75, -999.25)
+position = Vector2(2174.25, -897.75)
 rotation = -0.785398
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pq14p")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="walls"]
+position = Vector2(2283.5, -1343.5)
+shape = SubResource("RectangleShape2D_wavp7")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="walls"]
+position = Vector2(3321, -1286)
+shape = SubResource("RectangleShape2D_gyqka")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="walls"]
+position = Vector2(2048.75, -2267.75)
+shape = SubResource("RectangleShape2D_a7804")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="walls"]
+position = Vector2(3516.13, -2284.63)
+shape = SubResource("RectangleShape2D_a7804")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="walls"]
+position = Vector2(2782, -1516)
+shape = SubResource("RectangleShape2D_j8mlo")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="walls"]
+position = Vector2(2491, -1657)
+shape = SubResource("RectangleShape2D_lfwce")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="walls"]
+position = Vector2(3061, -1647.5)
+shape = SubResource("RectangleShape2D_sykqx")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="walls"]
+position = Vector2(2775.5, -2362)
+shape = SubResource("RectangleShape2D_c4ovi")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="walls"]
+position = Vector2(2490, -2164.5)
+shape = SubResource("RectangleShape2D_nkpw8")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="walls"]
+position = Vector2(3061, -2163.25)
+shape = SubResource("RectangleShape2D_rqgy7")
 
 [node name="Candy" parent="." instance=ExtResource("7_wc0lq")]
 position = Vector2(758, 1790)
@@ -395,6 +516,19 @@ scale = Vector2(0.2, 0.2)
 min_time = 2.0
 max_time = 2.0
 
+[node name="EnemyPatrol15" parent="." instance=ExtResource("6_1r4fx")]
+position = Vector2(2779, -2157)
+scale = Vector2(1.5, 1.5)
+speed = 350.0
+min_time = 1.5
+max_time = 2.5
+
 [node name="Player" parent="." instance=ExtResource("2_eu8yo")]
-position = Vector2(1260, 2358)
+position = Vector2(2766, -1361)
 base_speed = 300.0
+
+[node name="Candy11" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(2276, -1598)
+
+[node name="Candy12" parent="." instance=ExtResource("7_wc0lq")]
+position = Vector2(3272, -1608)
